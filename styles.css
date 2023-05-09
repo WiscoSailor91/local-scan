@@ -7,3 +7,14 @@ Author: Skyhawk Everheart
 #userOutputView {
     display: none;
 }
+
+#userInputView {
+    display: inline-block;
+}
+
+/* Header Styles Section */
+header {
+    background: darkcyan;
+    width: 100%;
+    padding-top: 30px;
+}
