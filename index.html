@@ -5,23 +5,33 @@
     <link rel="stylesheet" href="styles.css">
     <style></style>
     <title>Local-Scan Tool</title>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"
+            integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+    <script>
+        function swapDivVisibility(divShow, divHide) {
+            document.getElementById(divHide).style.display = "none";
+            document.getElementById(divShow).style.display = "block";
+        }
+    </script>
 </head>
 <body>
-    <header>Some header links will go here!</header>
-    <div class="userInputView">
-        A text box will go here!
-        <form action="" method="post">
-            <label for="userDataInput">Local-Scan Tool</label>
-            <textarea name="userDataInput" id="userDataInput" rows="50" cols="50">Testing</textarea>
-            <br>
-            <input type="submit" name="submitInfo" value="Submit">
-        </form>
-    </div>
-    <div class="userOutputView">
-        This div will display data output!
-        <!--A reset button will go here! -->
-        <label for="resetButton"></label>
-        <input type="reset" value="reset" id="resetButton">
-    </div>
+<header>Some header links will go here!</header>
+<div id="userInputView">
+    A text box will go here!
+    <form>
+        <label for="userDataInput">Local-Scan Tool</label>
+        <textarea name="userDataInput" id="userDataInput" rows="50" cols="50">Testing</textarea>
+        <br>
+        <input type="submit" name="submitInfo" value="Submit"
+               onclick="swapDivVisibility('userInputView','userOutputView')">
+    </form>
+</div>
+<div id="userOutputView">
+    This div will display data output!
+    <!--A reset button will go here! -->
+    <label for="resetButton"></label>
+    <button id="resetButton" onclick="swapDivVisibility('userOutputView','userInputView')">Reset</button>
+</div>
 </body>
 </html>
