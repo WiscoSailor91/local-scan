@@ -4,6 +4,6 @@ Author: Skyhawk Everheart
  */
 
 /* Reset Styles  Section */
-.userOutputView {
+#userOutputView {
     display: none;
 }
