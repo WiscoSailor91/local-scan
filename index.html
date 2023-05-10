@@ -11,14 +11,18 @@
     <script src="scripts.js"></script>
 </head>
 <body>
-    <header>
-        <nav class="nav-bar">
+<header>
+    <nav class="nav-bar">
+        <div id="leftLinks">
             <a href="index.html">New Scan</a>
+        </div>
+        <div id="rightLinks">
             <a href="https://zkillboard.com/">zKillboard</a>
             <a href="https://evemaps.dotlan.net/">Dotlan</a>
             <a href="https://www.eveonline.com/">EVE Online</a>
-        </nav>
-    </header>
+        </div>
+    </nav>
+</header>
 <div id="userInputView">
     <form id="inputData">
         <label for="userDataInput">Local-Scan Tool</label>
@@ -27,9 +31,22 @@
         <input type="submit" name="submitInfo" value="Submit" id="submitButton">
     </form>
 </div>
+<div id="userInstructions">
+    <h3>Posting a local or fleet scan:</h3>
+    <ul>
+        <li>Click on a character in the ingame channel you want to scan.
+        <ul>
+            <li>This can be fleet chat, local, or literally any other ingame channel.</li>
+        </ul>
+        <li>Press CTRL+a on your keyboard (command+a on a mac) to highlight everyone in the channel.</li>
+        <li>Press CTRL+c (command+c on a mac) to copy the selection to the clipboard.</li>
+        <li>Click inside of the textbox on this page and press CTRL+v (command+v on a mac) to paste the  data.</li>
+        <li>Click Submit!</li>
+    </ul>
+    <img src="media/scanExample.png" alt="Example of local scan selection.">
+</div>
 <div id="userOutputView">
     This div will display data output!
-    <!--A reset button will go here! -->
     <label for="resetButton"></label>
     <button id="resetButton">Reset</button>
 </div>

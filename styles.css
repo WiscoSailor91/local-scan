@@ -3,7 +3,12 @@ This style sheet is for Skyhawk Everheart's Local Scan tool
 Author: Skyhawk Everheart
  */
 
-/* Reset Styles  Section */
+/* Reset Styles  Styles */
+html, body, header, div, form, li {
+    margin: 0;
+    padding: 0;
+}
+
 #userOutputView {
     display: none;
 }
@@ -12,9 +17,29 @@ Author: Skyhawk Everheart
     display: inline-block;
 }
 
-/* Header Styles Section */
+/* Header Styles Styles */
 header {
     background: darkcyan;
     width: 100%;
-    padding-top: 30px;
+    padding: 8px;
+}
+#leftLinks {
+    float: left;
+}
+#rightLinks {
+    float: right;
+}
+
+
+/* Main Content Styles */
+#userInputView {
+    float: left;
+}
+
+#userInstructions {
+    float: right;
+}
+
+li {
+    padding: 4px;
 }
