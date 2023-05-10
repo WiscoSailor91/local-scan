@@ -4,7 +4,11 @@ Author: Skyhawk Everheart
  */
 
 /* Reset Styles  Styles */
-html, body, header, div, form, li {
+html {
+    font-size: 14px;
+}
+html, body, header, div, form, li, nav, a, label, textarea, input, h3, ul, img, button {
+    border: 0;
     margin: 0;
     padding: 0;
 }
@@ -18,8 +22,10 @@ html, body, header, div, form, li {
 }
 
 /* Header Styles Styles */
-header {
+.nav-bar {
     background: darkcyan;
+    position: fixed;
+    top: 0;
     width: 100%;
     padding: 8px;
 }
@@ -30,16 +36,51 @@ header {
     float: right;
 }
 
-
 /* Main Content Styles */
+body {
+    padding-top: 40px;
+}
+
 #userInputView {
     float: left;
+    padding-left: 35px;
+}
+#userInputView label {
+    font-size: 20px;
+}
+
+#userDataInput {
+    border: solid black 3px;
+    display: flex;
+    flex-direction: column;
+}
+
+#userInputView label {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
 }
 
 #userInstructions {
     float: right;
 }
 
+#userInstructions ul, #userInstructions img {
+    display: flex;
+    flex-direction: column;
+}
+
 li {
     padding: 4px;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+#userInputView input, #userOutputView button {
+    border: solid black 1px;
 }
