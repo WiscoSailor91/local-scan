@@ -35,6 +35,14 @@ html, body, header, div, form, li, nav, a, label, textarea, input, h3, ul, img, 
 #rightLinks {
     float: right;
 }
+#rightLinks ul {
+    list-style-type: none;
+}
+#rightLinks ul {
+    display: flex;
+    flex-direction: row;
+    padding-right: 20px;
+}
 
 /* Main Content Styles */
 body {

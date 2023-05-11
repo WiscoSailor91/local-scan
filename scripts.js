@@ -10,6 +10,7 @@ $(document).ready(function () {
         document.querySelector("#userOutputView").style.display = "none";
         document.querySelector("#userInstructions").style.display = "block";
         document.querySelector("#userInputView").style.display = "block";
+        document.getElementById("userDataInput").value = "";
     });
     //This function stops submit button from refreshing page
     $(document).on('submit', '#inputData', function() {
