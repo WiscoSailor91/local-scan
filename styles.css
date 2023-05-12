@@ -61,6 +61,7 @@ body {
     border: solid black 3px;
     display: flex;
     flex-direction: column;
+    resize: none;
 }
 
 #userInputView label {
