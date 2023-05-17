@@ -35,18 +35,19 @@ html, body, header, div, form, li, nav, a, label, textarea, input, h3, ul, img, 
 #rightLinks {
     float: right;
 }
-#rightLinks ul {
-    list-style-type: none;
-}
+
 #rightLinks ul {
     display: flex;
     flex-direction: row;
     padding-right: 20px;
+    list-style-type: none;
 }
 
 /* Main Content Styles */
 body {
     padding-top: 40px;
+    background-color: black;
+    color: white;
 }
 
 #userInputView {
@@ -70,7 +71,7 @@ body {
     text-align: center;
 }
 
-#userInstructions {
+#rightPaneWrapper {
     float: right;
 }
 
@@ -92,4 +93,26 @@ li {
 
 #userInputView input, #userOutputView button {
     border: solid black 1px;
+}
+
+/* Footer Styles Section */
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer div {
+    float: right;
+}
+
+#switchToDarkButton {
+    display: none;
+}
+
+#footerWrapper ul {
+    display: flex;
+    flex-direction: row;
+    padding-right: 20px;
+    list-style-type: none;
 }

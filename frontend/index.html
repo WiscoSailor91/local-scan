@@ -33,27 +33,49 @@
         <input type="submit" name="submitInfo" value="Submit" id="submitButton" class="center">
     </form>
 </div>
-<div id="userInstructions">
-    <h3>Posting a local or fleet scan:</h3>
-    <ul>
-        <li>Click on a character in the ingame channel you want to scan.
+<div id="rightPaneWrapper">
+    <div id="userInstructions">
+        <h3>Posting a local or fleet scan:</h3>
         <ul>
-            <li>This can be fleet chat, local, or literally any other ingame channel.</li>
+            <li>Click on a character in the ingame channel you want to scan.
+                <ul>
+                    <li>This can be fleet chat, local, or literally any other ingame channel.</li>
+                </ul>
+            <li>Press CTRL+a on your keyboard (command+a on a mac) to highlight everyone in the channel.</li>
+            <li>Press CTRL+c (command+c on a mac) to copy the selection to the clipboard.</li>
+            <li>Click inside of the textbox on this page and press CTRL+v (command+v on a mac) to paste the data.</li>
+            <li>Click Submit!</li>
         </ul>
-        <li>Press CTRL+a on your keyboard (command+a on a mac) to highlight everyone in the channel.</li>
-        <li>Press CTRL+c (command+c on a mac) to copy the selection to the clipboard.</li>
-        <li>Click inside of the textbox on this page and press CTRL+v (command+v on a mac) to paste the  data.</li>
-        <li>Click Submit!</li>
-    </ul>
-    <img src="media/scanExample.png" alt="Example of local scan selection." class="center">
-</div>
-<div id="userExample">
-
+    </div>
+    <div id="userExample">
+        <img src="media/scanExample.png" alt="Example of local scan selection." class="center">
+    </div>
 </div>
 <div id="userOutputView">
     This div will display data output!
     <label for="resetButton"></label>
     <button id="resetButton">Reset</button>
 </div>
+<footer>
+    <div id="footerWrapper">
+        <div id="footerLinks">
+
+        </div>
+        <ul>
+            <li>
+                <div id="switchToDarkButton">
+                    <label for="darkButton"></label>
+                    <button id="darkButton">Dark Mode</button>
+                </div>
+            </li>
+            <li>
+                <div id="switchToLightButton">
+                    <label for="lightButton"></label>
+                    <button id="lightButton">Light Mode</button>
+                </div>
+            </li>
+        </ul>
+    </div>
+</footer>
 </body>
 </html>
