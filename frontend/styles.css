@@ -7,18 +7,16 @@ Author: Skyhawk Everheart
 html {
     font-size: 14px;
 }
-html, body, header, div, form, li, nav, a, label, textarea, input, h3, ul, img, button {
+html, body, header, div, form, li, nav, a, label, textarea, input, h3, ul, img,
+button, footer {
     border: 0;
     margin: 0;
     padding: 0;
 }
 
+/* the div that the output based on  web response starts out hidden */
 #userOutputView {
     display: none;
-}
-
-#userInputView {
-    display: inline-block;
 }
 
 /* Header Styles Styles */
@@ -50,49 +48,47 @@ body {
     color: white;
 }
 
-#userInputView {
-    float: left;
-    padding-left: 35px;
+#overallContentWrapper {
+    width: 100%;
 }
-#userInputView label {
+
+#leftPaneWrapper {
+    width: 50%;
+    float: left;
+}
+
+#leftPaneWrapper label {
     font-size: 20px;
 }
 
-#userDataInput {
-    border: solid black 3px;
-    display: flex;
-    flex-direction: column;
-    resize: none;
-}
-
-#userInputView label {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-}
-
 #rightPaneWrapper {
-    float: right;
+    margin-left: 50%;
+    padding-top: 80px;
 }
 
-#userInstructions ul, #userInstructions img {
+#leftPaneWrapper label, #leftPaneWrapper textarea, #leftPaneWrapper input {
     display: flex;
     flex-direction: column;
 }
-
-li {
-    padding: 4px;
+#leftPaneWrapper label {
+    text-align: center;
+    padding-bottom: 6px;
 }
 
 .center {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 50%;
 }
 
-#userInputView input, #userOutputView button {
-    border: solid black 1px;
+#userInstructions {
+
+}
+
+/*This applies only to the textbox itself */
+#userDataInput {
+    border: solid black 3px;
+    resize: none;
 }
 
 /* Footer Styles Section */
@@ -115,4 +111,9 @@ footer div {
     flex-direction: row;
     padding-right: 20px;
     list-style-type: none;
+}
+
+/* Style for li elements in the header, and instructions area */
+#rightLinks li, #userInstructions li {
+    padding: 4px;
 }
