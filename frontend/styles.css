@@ -81,10 +81,6 @@ body {
     margin-right: auto;
 }
 
-#userInstructions {
-
-}
-
 /*This applies only to the textbox itself */
 #userDataInput {
     border: solid black 3px;
