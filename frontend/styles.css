@@ -61,15 +61,22 @@ body {
     font-size: 20px;
 }
 
+#leftPaneWrapper label, #leftPaneWrapper textarea, #leftPaneWrapper input {
+    display: flex;
+    flex-direction: column;
+
+}
+
 #rightPaneWrapper {
     margin-left: 50%;
     padding-top: 80px;
 }
 
-#leftPaneWrapper label, #leftPaneWrapper textarea, #leftPaneWrapper input {
+#userInstructions h3, #userInstructions ul, #userInstructions li, #userExample {
     display: flex;
     flex-direction: column;
 }
+
 #leftPaneWrapper label {
     text-align: center;
     padding-bottom: 6px;
