@@ -1,5 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
+<!--
+Author: Skyhawk Everheart
+Date: May 2023
+Why: A personal project to improve personal skills, and make useful tools for
+the EVE Online community.
+-->
+
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="styles.css">
@@ -25,8 +33,8 @@
         </div>
     </nav>
 </header>
-<div id="overallContentWrapper">
-    <div id="leftPaneWrapper">
+<div id="overallContentWrapper" style="display:flex;">
+    <div id="leftPaneWrapper" style="display: inherit;">
         <form id="inputData">
             <label for="userDataInput">Local-Scan Tool</label>
             <textarea name="userDataInput" id="userDataInput" rows="50" cols="50">Paste your scan here.</textarea>
@@ -35,23 +43,19 @@
         </form>
     </div>
     <div id="rightPaneWrapper">
-        <div id="userInstructions">
-            <h3>Posting a local or fleet scan:</h3>
-            <ul>
-                <li>Click on a character in the ingame channel you want to scan.
-                    <ul>
-                        <li>This can be fleet chat, local, or literally any other ingame channel.</li>
-                    </ul>
-                <li>Press CTRL+a on your keyboard (command+a on a mac) to highlight everyone in the channel.</li>
-                <li>Press CTRL+c (command+c on a mac) to copy the selection to the clipboard.</li>
-                <li>Click inside of the textbox on this page and press CTRL+v (command+v on a mac) to paste the data.
-                </li>
-                <li>Click Submit!</li>
-            </ul>
-        </div>
-        <div id="userExample">
-            <img src="media/scanExample.png" alt="Example of local scan selection." class="center">
-        </div>
+        <h3>Posting a local or fleet scan:</h3>
+        <ul>
+            <li>Click on a character in the ingame channel you want to scan.
+                <ul>
+                    <li>This can be fleet chat, local, or literally any other ingame channel.</li>
+                </ul>
+            <li>Press CTRL+a on your keyboard (command+a on a mac) to highlight everyone in the channel.</li>
+            <li>Press CTRL+c (command+c on a mac) to copy the selection to the clipboard.</li>
+            <li>Click inside of the textbox on this page and press CTRL+v (command+v on a mac) to paste the data.
+            </li>
+            <li>Click Submit!</li>
+        </ul>
+        <img src="media/scanExample.png" alt="Example of local scan selection." class="center">
     </div>
 </div>
 <div id="userOutputView">
