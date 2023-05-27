@@ -55,31 +55,29 @@ body {
 #leftPaneWrapper {
     width: 50%;
     float: left;
-}
-
-#leftPaneWrapper label {
-    font-size: 20px;
+    padding-left: 75px;
 }
 
 #leftPaneWrapper label {
     text-align: center;
     padding-bottom: 6px;
+    font-size: 20px;
 }
 
 #leftPaneWrapper label, #leftPaneWrapper textarea, #leftPaneWrapper input {
     display: flex;
     flex-direction: column;
-
 }
 
 #rightPaneWrapper {
-    margin-left: 50%;
+    margin-left: 50px;
     padding-top: 80px;
 }
 
 #rightPaneWrapper h3, #rightPaneWrapper ul, #rightPaneWrapper li, #rightPaneWrapper img {
     display: flex;
     flex-direction: column;
+    padding: 4px;
 }
 
 .center {
