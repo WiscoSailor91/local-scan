@@ -1,13 +1,53 @@
 $(document).ready(function () {
-    //This function hides the input box and displays the div for the output
+    //This function hides the input box, sends JSON string to server, and displays the div for the output
     $("#submitButton").click(function () {
         document.querySelector("#leftPaneWrapper").style.display = "none";
         document.querySelector("#rightPaneWrapper").style.display = "none";
         document.querySelector("#userOutputView").style.display = "block";
-        let userInputArray = $("#submitButton").value.split("\n");
-        let userInputJson = JSON.stringify(userInputArray);
-        console.log(userInputJson);
+        const userInputArray = $("#userDataInput").val().split("\n");
+        const userInputJson = JSON.stringify(userInputArray);
+
+        console.log("Converted #userDataInput to JSON:\n" + userInputJson);
+        const handleXhrResponse = (xhr) => {
+            return new Promise((resolve, reject) => {
+                console.log("Inside handleXhrResponse()");
+                if (xhr.status >= 200 && xhr.status < 300) {
+                    const responseJson = JSON.parse(xhr.responseText);
+                    resolve(responseJson);
+                } else {
+                    reject(new Error("HTTP error; status " + xhr.status));
+                }
+            });
+        };
+
+        const endpoint = "http://localhost:8080/userinfo";
+        const xhr = new XMLHttpRequest();
+        xhr.open("POST", endpoint);
+        xhr.setRequestHeader("Content-Type", "application/json");
+
+        xhr.onload = async () => {
+            console.log("Entering onload() of XmlHttpRequest");
+            try {
+                console.log("Submitting " + userInputJson + " to endpoint " + endpoint);
+                const responseData = await handleXhrResponse(xhr);
+                console.log("Response: ", responseData);
+
+                document.getElementById("userOutputData").innerText = JSON.stringify(responseData);
+
+            } catch(error) {
+                console.log("Submission errored; " + error.message);
+                // further error handling as we want
+            }
+            console.log("Leaving onload() of XmlHttpRequest");
+        };
+
+        xhr.onerror = () => {
+            console.log("Running onerror() of XmlHttpRequest");
+        };
+
+        xhr.send(userInputJson);
     });
+
     //This function hides the output and displays the input box again
     $("#resetButton").click(function () {
         document.querySelector("#userOutputView").style.display = "none";
@@ -35,4 +75,3 @@ $(document).ready(function () {
         document.querySelector("#switchToLightButton").style.display = "block";
     });
 });
-
