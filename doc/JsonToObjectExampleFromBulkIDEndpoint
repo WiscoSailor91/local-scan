@@ -1,0 +1,49 @@
+{
+  "characters": [
+    {
+      "id": 390496187,
+      "name": "Skye Cloudstrike"
+    },
+    {
+      "id": 2112737124,
+      "name": "Wah Donka"
+    }
+  ],
+  "ships": [ {}, {} ] // not really a comment in JSON but is this what this is?
+}
+
+Object containing
+  field named "characters", which is *either* (Jackson-wise) an array of or List<> of:
+    Object
+      containing an int field called "id"
+      containing a String field called "name"
+
+If we wanted this automagically mapped back from an HTTP request, we'd create a
+data transfer object (DTO) like:
+
+------
+
+data comes in (JSON) with some array of names (String)
+  - check that they're not bullshit weird symbols/letters/not-allowed-eve-names
+  - look in the DB to see if they're there, and if not add them (we'll look up ID numbers later)
+
+EVE rules (https://support.eveonline.com/hc/en-us/articles/8563435867804-EVE-Online-Naming-Policy):
+- 3 to 37 characters, consisting of A-Z, a-z, 0-9, "-" (minus, not en-dash), and single quote "'"
+  - first-and-optional-middle name, optionally followed by family name
+- "name" (first and optional middle name) limited to 24 characters with optional space iff middle name
+- "family name", optional, limited to 12 characters
+- space, minus, and single-quote may not be the first or last character
+- corporation names may include the "." (period) character
+
+------
+
+Table Setup
+
+- 3 tables
+    - Character, Corporation, and Alliance
+        - Note: Alliance ID is the Character & Corporation tables can have a value, or be null
+        - Note: Character has a many to one relationship with Corporation
+        - Note: Corporation has a one to one relationship with Alliance (alliance_id can be null)
+        - Character: CCP's Character ID (char_id), Character name (char_name), Alliance ID (alliance_id)
+        - Corporation: CCP's Corporation ID (corp_id), Corporation name (corp_name), Corporation logo (corp_logo), Alliance ID (alliance_id)
+        - Alliance: CCP's Alliance ID (alliance_id), Alliance name (alliance_name), Alliance logo (alliance_logo)

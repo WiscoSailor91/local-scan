@@ -36,5 +36,4 @@ public class LocalScanController {
     //        if no, give that name we don't know about to some other service to go figure it out
     //    with all these things we've collected, send back whatever Java Collection thing we made
     // which will get automatically mapped to JSON by Spring Boot/Jackson (a JSON-to-from-object mapper)
-
 }
