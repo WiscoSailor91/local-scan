@@ -64,18 +64,32 @@ $(document).ready(function () {
 
         return false;
     });
+
     //This function changes CSS settings to light mode
     $("#switchToLightButton").click(function () {
-        document.querySelector("#lightButton").style.backgroundColor = "white";
+        //Next 6 lines change light, dark, and submit buttons background color & font color
+        document.querySelector("#lightButton").style.backgroundColor = "#DEE4E7";
         document.querySelector("#lightButton").style.color = "black";
         document.querySelector("#darkButton").style.backgroundColor = "black";
-        document.querySelector("#darkButton").style.color = "white";
+        document.querySelector("#darkButton").style.color = "#DEE4E7";
+        document.querySelector("#submitButton").style.backgroundColor = "#37474F";
+        document.querySelector("#submitButton").style.color = "white";
+        //Next 2 lines change body font color & background color
+        document.querySelector("body").style.backgroundColor = "#DEE4E7";
+        document.querySelector("body").style.color = "black";
     });
+
     //This function changes CSS settings to dark mode
     $("#switchToDarkButton").click(function () {
+        //Next 6 lines change light, dark, and submit buttons background color & font color
         document.querySelector("#lightButton").style.backgroundColor = "black";
-        document.querySelector("#lightButton").style.color = "white";
-        document.querySelector("#darkButton").style.backgroundColor = "white";
+        document.querySelector("#lightButton").style.color = "#DEE4E7";
+        document.querySelector("#darkButton").style.backgroundColor = "#DEE4E7";
         document.querySelector("#darkButton").style.color = "black";
+        document.querySelector("#submitButton").style.backgroundColor = "#DEE4E7";
+        document.querySelector("#submitButton").style.color = "black";
+        //Next 2 lines change body font color & background color
+        document.querySelector("body").style.backgroundColor = "black";
+        document.querySelector("body").style.color = "#DEE4E7";
     });
 });

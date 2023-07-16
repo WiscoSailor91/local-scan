@@ -21,7 +21,7 @@ button, footer {
 
 /* Header Styles Styles */
 .nav-bar {
-    background: darkcyan;
+    background: #B2BEB5;
     position: fixed;
     top: 0;
     width: 100%;
@@ -45,7 +45,7 @@ button, footer {
 body {
     padding-top: 40px;
     background-color: black;
-    color: white;
+    color: #DEE4E7;
 }
 
 #overallContentWrapper {
@@ -73,6 +73,11 @@ body {
     padding-top: 80px;
 }
 
+#submitButton {
+    background-color: #DEE4E7;
+    color: black;
+}
+
 #rightPaneWrapper h3, #rightPaneWrapper ul, #rightPaneWrapper li, #rightPaneWrapper img {
     display: flex;
     flex-direction: column;
@@ -87,7 +92,7 @@ body {
 
 /*This applies only to the textbox itself */
 #userDataInput {
-    border: solid black 3px;
+    border: solid gray 3px;
     resize: none;
 }
 
@@ -104,14 +109,14 @@ footer div {
 
 #darkButton {
     margin: 3px;
-    background-color: white;
+    background-color: #DEE4E7;
     color: black;
 }
 
 #lightButton {
     margin: 3px;
     background-color: black;
-    color: white;
+    color: #DEE4E7;
 }
 
 #footerWrapper ul {
