@@ -64,14 +64,18 @@ $(document).ready(function () {
 
         return false;
     });
-    //This function hides light mode button, and changes CSS settings to light mode
+    //This function changes CSS settings to light mode
     $("#switchToLightButton").click(function () {
-        document.querySelector("#switchToDarkButton").style.display = "block";
-        document.querySelector("#switchToLightButton").style.display = "none";
+        document.querySelector("#lightButton").style.backgroundColor = "white";
+        document.querySelector("#lightButton").style.color = "black";
+        document.querySelector("#darkButton").style.backgroundColor = "black";
+        document.querySelector("#darkButton").style.color = "white";
     });
-    //This function hides dark mode button, and changes CSS settings to dark mode
+    //This function changes CSS settings to dark mode
     $("#switchToDarkButton").click(function () {
-        document.querySelector("#switchToDarkButton").style.display = "none";
-        document.querySelector("#switchToLightButton").style.display = "block";
+        document.querySelector("#lightButton").style.backgroundColor = "black";
+        document.querySelector("#lightButton").style.color = "white";
+        document.querySelector("#darkButton").style.backgroundColor = "white";
+        document.querySelector("#darkButton").style.color = "black";
     });
 });

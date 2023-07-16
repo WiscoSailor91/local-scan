@@ -102,8 +102,16 @@ footer div {
     float: right;
 }
 
-#switchToDarkButton {
-    display: none;
+#darkButton {
+    margin: 3px;
+    background-color: white;
+    color: black;
+}
+
+#lightButton {
+    margin: 3px;
+    background-color: black;
+    color: white;
 }
 
 #footerWrapper ul {
