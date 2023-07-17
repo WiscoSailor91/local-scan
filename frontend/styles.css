@@ -41,6 +41,10 @@ button, footer {
     list-style-type: none;
 }
 
+a:visited {
+    text-decoration: none;
+}
+
 /* Main Content Styles */
 body {
     padding-top: 40px;
@@ -76,6 +80,8 @@ body {
 #submitButton {
     background-color: #DEE4E7;
     color: black;
+    border-radius: 10px;
+    padding: 5px;
 }
 
 #rightPaneWrapper h3, #rightPaneWrapper ul, #rightPaneWrapper li, #rightPaneWrapper img {
@@ -111,12 +117,15 @@ footer div {
     margin: 3px;
     background-color: #DEE4E7;
     color: black;
+    padding-left: 3px;
+    padding-right: 3px;
 }
 
 #lightButton {
     margin: 3px;
     background-color: black;
     color: #DEE4E7;
+    padding-right: 3px;
 }
 
 #footerWrapper ul {
