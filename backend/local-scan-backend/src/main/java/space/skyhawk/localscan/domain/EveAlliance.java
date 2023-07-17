@@ -24,6 +24,36 @@ public class EveAlliance {
     @OneToMany(mappedBy = "alliance")
     private Set<EveCorporation> memberCorporations;
 
-    //Write getter & setter statements for class fields
+    public int getAllianceId() {
+        return this.allianceId;
+    }
+
+    public String getTicker() {
+        return this.ticker;
+    }
+
+    public String getName() {
+        return this.name;
+    }
+
+    public Set<EveCorporation> getMemberCorporations() {
+        return this.memberCorporations;
+    }
+
+    public void setAllianceId(int allianceId) {
+        this.allianceId = allianceId;
+    }
+
+    public void setTicker(String ticker) {
+        this.ticker = ticker;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setMemberCorporations(Set<EveCorporation> memberCorporations) {
+        this.memberCorporations = memberCorporations;
+    }
 
 }

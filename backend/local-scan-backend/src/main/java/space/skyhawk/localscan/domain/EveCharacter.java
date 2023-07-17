@@ -22,6 +22,28 @@ public class EveCharacter {
     @JoinColumn(name = "corporationId")
     EveCorporation corporation;
 
-    //Write getter & setter statements for class fields
+    public int getCharacterId() {
+        return this.characterId;
+    }
+
+    public String getName() {
+        return this.name;
+    }
+
+    public EveCorporation getCorporation() {
+        return this.corporation;
+    }
+
+    public void setCharacterId(int characterId) {
+        this.characterId = characterId;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setCorporation(EveCorporation corporation) {
+        this.corporation = corporation;
+    }
 
 }
