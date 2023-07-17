@@ -15,21 +15,58 @@ public class EveCorporation {
 
     @Id
     @Column(name = "corporationId")
-    int corporationId;
+    private int corporationId;
 
     @Column(name = "ticker", length = 5)
-    String ticker;
+    private String ticker;
 
     @Column(name = "name", length = 50)
-    String name;
+    private String name;
 
     @OneToMany(mappedBy = "corporation")
-    Set<EveCharacter> members;
+    private Set<EveCharacter> members;
 
     @ManyToOne
     @JoinColumn(name = "allianceId")
-    EveAlliance alliance;
+    private EveAlliance alliance;
 
-    //Write getter & setter statements for class fields
+    public int getCorporationId() {
+        return this.corporationId;
+    }
+    public String getTicker() {
+        return this.ticker;
+    }
+
+    public String getName() {
+        return this.name;
+    }
+
+    public Set<EveCharacter> getMembers() {
+        return this.members;
+    }
+
+    public EveAlliance getAlliance() {
+        return this.alliance;
+    }
+
+    public void setCorporationId(int corporationId) {
+        this.corporationId = corporationId;
+    }
+
+    public void setTicker(String ticker) {
+        this.ticker = ticker;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setMembers(Set<EveCharacter> members) {
+        this.members = members;
+    }
+
+    public void setAlliance(EveAlliance alliance) {
+        this.alliance = alliance;
+    }
 
 }
