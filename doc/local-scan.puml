@@ -1,0 +1,23 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+autoactivate on
+
+' layout
+participant UserAgent
+
+box "Backend"
+participant Controller
+participant Service
+end box
+
+box "Database"
+database Postgres
+end box
+
+' sequence
+UserAgent -> Controller: POST
+Controller -> Controller:
+
+@enduml
