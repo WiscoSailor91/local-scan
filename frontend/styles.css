@@ -98,8 +98,10 @@ body {
 
 /*This applies only to the textbox itself */
 #userDataInput {
-    border: solid gray 3px;
+    border: dotted 3px;
     resize: none;
+    background-color: #B2BEB5;
+    text-align: center;
 }
 
 /* Footer Styles Section */
